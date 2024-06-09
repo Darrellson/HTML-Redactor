@@ -93,3 +93,19 @@ label {
   margin-left: 0.04rem;
   padding-left: 0.7rem;
 }
+/* Add your inline styles here */
+.tool-items {
+  /* Example inline style for tool-items class */
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.tool-items:hover {
+  /* Example inline style for hover effect */
+  background-color: #ddd;
+}
+
+.center {
+  /* Example inline style for center class */
+  text-align: center;
+}
