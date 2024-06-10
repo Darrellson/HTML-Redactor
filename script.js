@@ -64,18 +64,3 @@ const getImage = () => {
   }
 };
 
-/**
- * Function to print the editor content.
- */
-const printMe = () => {
-  if (confirm("Check your Content before print")) {
-    const body = document.body;
-    let s = body.innerHTML;
-    body.textContent = editorContent.innerHTML;
-
-    document.execCommandShowHelp;
-    body.style.whiteSpace = "pre";
-    window.print();
-    location.reload();
-  }
-};
