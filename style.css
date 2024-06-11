@@ -1,241 +1,53 @@
-@import url('https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
-
-pre {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-#toolBar2 {
-  background: #2c3e50;
-  padding-left: 5px;
-}
-
-#thisForm {
-  margin: 5px 5px 5px 5px;
-  display: block;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  border: 0;
-}
-
-.intLink {
-  cursor: pointer;
-  color: #ecf0f1;
-  text-decoration: none;
-  margin: 6px 2px;
-  padding: 2px 5px;
-  display: inline-block;
-  outline: none;
-}
-
-#toolBar2 select {
-  font-size: 13px;
-  font-weight: bold;
-  border: 0;
-  width: 22px;
-  height: 30px;
-  color: #000000;
-  background: #fff;
-  margin-top: 2px;
-}
-
-#textBox {
-  min-height: 200px;
-  border: 0;
-  padding: 3px;
-  overflow: auto;
-  background: #fff;
-  border-top: 2px solid #bdc3c7;
-  border-left: 0;
-  border-right: 0;
-}
-
-#textBox:focus {
-  border-top: 2px solid #5fd3f7;
-  border-left: 0;
-  border-right: 0;
-  outline: none;
-}
-
-#textBox #sourceText {
-  margin: 0;
-  padding: 5px;
-  background: #fff;
-  color: #4b4b4b;
-}
-
-#editMode {
-  background: #e74c3c;
-  padding: 5px 10px;
-  display: inline-block;
-  color: #ecf0f1;
-}
-
-#editMode label {
-  cursor: pointer;
-}
-
-input[type="checkbox"] {
-  display: none;
-  outline: none;
-}
-
-input[type="checkbox"]:checked + label {
-  background: #575757;
-  color: #fcfdff;
-  text-shadow: 0 1px 1px #303030;
-}
-
-input[type="checkbox"]:checked + label .handle {
-  margin-left: 45px;
-}
-
-label.custom-select {
-  position: relative;
-  display: inline-block;
-}
-
-.custom-select select {
-  display: inline-block;
-  padding: 4px 3px 3px 5px;
-  margin: 0;
-  font: inherit;
-  outline: none;
-  line-height: 1.2;
-  -webkit-appearance: none;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  .custom-select select {
-    padding-right: 10px;
-  }
-}
-
-.custom-select:after {
-  font-family: FontAwesome;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  font-size: 14px;
-  line-height: 30px;
-  padding: 0 7px;
-  background: #2c3e50;
-  height: 30px;
-  margin-right: 0;
-  margin-top: 2px;
-  color: #ecf0f1;
-  pointer-events: none;
-}
-
-.fonthd:after {
-  content: "\f040";
-}
-
-.fontFam:after {
-  content: "\f034";
-}
-
-.fontSi:after {
-  content: "\f035";
-}
-
-.fontCol:after {
-  content: "\f031";
-}
-
-.fontBck:after {
-  content: "\f043";
-}
-
-.fonthd:hover:after,
-.fontFam:hover:after,
-.fontSi:hover:after,
-.fontCol:hover:after,
-.fontBck:hover:after,
-.send-btn:hover,
-.intLink:hover {
-  color: #1ac0f5;
-  cursor: pointer;
-  -webkit-transition: background 1s ease;
-  -moz-transition: background 1s ease;
-  -o-transition: background 1s ease;
-  transition: background 1s ease;
-}
-
-.no-pointer-events .custom-select:after {
-  content: none;
-}
-
 body {
-  background: #1abc9c;
+  font-family: "Roboto", sans-serif;
+  margin: 20px;
 }
 
-#thisForm {
-  box-shadow: 0 5px 25px 10px #35ac8b;
-}
-
-#textBox {
-  height: 500px;
-}
-
-#editor_area {
-  width: 98.5%;
-  min-height: 200px;
-  margin: 2px;
-}
-
-.main {
-  width: 800px;
-  margin: 0 auto;
-}
-
-.head-title {
-  text-align: center;
-  color: #ffffff;
-  text-shadow: 0 4px 3px #6d6d6d;
-}
-
-.head-title a {
-  padding: 5px 10px;
-  background: #fff;
-  text-decoration: none;
-  color: #333;
-  transition: color 1s ease;
-}
-
-.head-title a:hover {
-  color: #f55;
-  transition: color 1s ease;
-}
-
-.code {
-  background: #333;
+#editor-container {
+  border: 1px solid #ccc;
   padding: 10px;
-  border: 5px solid #1cd9e0;
-  color: #13dce4;
+  max-width: 800px;
+  margin: auto;
+  border-radius: 5px;
+  background: #f9f9f9;
 }
 
-.body-text {
-  color: white;
+#toolbar button {
+  font-family: "Material Icons";
 }
 
-@media screen and (max-width: 480px) {
-  .main {
-    width: 100%;
-    margin: 30px auto;
-  }
+#editor {
+  min-height: 300px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background: #fff;
+}
+
+#html-view {
+  display: none;
+  width: 100%;
+  min-height: 300px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+#toolbar {
+  margin-bottom: 10px;
+}
+
+#toolbar button,
+#toolbar select,
+#toolbar input[type="color"] {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+#toolbar button:hover,
+#toolbar select:hover,
+#toolbar input[type="color"]:hover {
+  background-color: #e0e0e0;
 }
